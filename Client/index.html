@@ -1,0 +1,27 @@
+<!--Html my beloved-->
+<head>
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <script type="module" src="./Main.js"></script>
+</head>
+
+<body id="BodyId">
+  <div><h1 id="WelcomeRSP">WELCOME! To rock paper sicssors!</h1></div>
+  <div id="ButtonContainer">
+    <button onclick="HighlightGuy('rock')" id="rock" class="unselectedButton">
+      rock
+    </button>
+    <button onclick="HighlightGuy('paper')" id="paper" class="unselectedButton">
+      paper
+    </button>
+    <button
+      onclick="HighlightGuy('scissors')"
+      id="scissors"
+      class="unselectedButton"
+    >
+      scissors
+    </button>
+  </div>
+  <div id="SSC">
+    <button onclick="TheClicker()" id="ServerSender">LOCK IN</button>
+  </div>
+</body>

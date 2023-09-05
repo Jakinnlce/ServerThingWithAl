@@ -1,0 +1,53 @@
+.unselectedButton {
+  background-color: white;
+  width: 200;
+  height: 50;
+}
+.user1Background {
+  background-color: rgb(220, 248, 248);
+}
+
+.user2Background {
+  background-color: rgb(236, 191, 191);
+}
+
+#ButtonContainer {
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 500px; */
+}
+
+#ServerSender {
+  width: 400;
+  height: 100;
+}
+
+#SSC {
+  display: flex;
+  justify-content: center;
+  margin-top: 100;
+  /*margin-top: 50px; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.User1txt {
+  background: linear-gradient(to bottom, rgb(113, 138, 219), rgb(67, 80, 190));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 120;
+  text-align: center;
+}
+
+.User2txt {
+  background: linear-gradient(to bottom, rgb(219, 113, 113), rgb(190, 67, 67));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 120;
+  text-align: center;
+}
