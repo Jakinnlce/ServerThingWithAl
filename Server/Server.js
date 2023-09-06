@@ -1,26 +1,29 @@
 var express = require("express");
 var cookieParser = require("cookie-parser");
+var path = require("path");
 var app = express();
 var expressWs = require("express-ws")(app);
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(cookieParser());
 
+const SendFileOptions = {
+  root: path.dirname(__dirname),
+};
+
 app.get("/", function (req, res) {
-  // res.sendFile(path.join(__dirname, "/index.html"));
-  res.sendFile("C:\\Users\\carrj\\Al gave birth today\\Client\\index.html");
+  res.sendFile(path.join("Client", "index.html"), SendFileOptions);
 });
 app.get("/styles.css", function (req, res) {
-  // res.sendFile(path.join(__dirname, "/index.html"));
-  res.sendFile("C:\\Users\\carrj\\Al gave birth today\\Client\\StyleStuff.css");
+  res.sendFile(path.join("Client", "StyleStuff.css"), SendFileOptions);
 });
 
 app.get("/Main.js", function (req, res) {
-  res.sendFile("C:\\Users\\carrj\\Al gave birth today\\Client\\Main.js");
+  res.sendFile(path.join("Client", "Main.js"), SendFileOptions);
 });
 
 app.get("/Cookie.js", function (req, res) {
-  res.sendFile("C:\\Users\\carrj\\Al gave birth today\\Client\\Cookie.js");
+  res.sendFile(path.join("Client", "Cookie.js"), SendFileOptions);
 });
 
 let Socket1 = null;
